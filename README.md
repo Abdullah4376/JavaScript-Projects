@@ -1,2 +1,1 @@
-# Quiz-App
-A Simple Quiz App.
+# A Repository With Minor Projects!

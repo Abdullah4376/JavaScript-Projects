@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+</head>
+<body>
+
+    <div class="quote-wrapper">
+        <h1>Random Quote Generator</h1>
+        <div class="quotes"></div>
+        <div class="writer"></div>
+        <button>Next Quote</button>
+    </div>
+
+
+    
+</body>
+<script>
+    const quotes = [{
+        quote: 'One may often find his destiny on the path he takes to avoid it!',
+        writer: '-Master Oogway'
+    }, 
+    {
+        quote: 'As long as there are those who remember what was, there will be always those who remember what can be!',
+        writer: '-Thanos'
+    },
+    {
+        quote: 'I do not fear the person who knows 10000 ways to kick, I fear the person who has learned a single kick 10000 times!',
+        writer: '-Bruce Lee'
+    }
+    ];
+
+    const btn = document.querySelector('button');
+    const quote = document.querySelector('.quotes');
+    const theWriter = document.querySelector('.writer');
+
+    btn.addEventListener('click', () => {
+        const random = Math.floor(Math.random() * quotes.length);
+        quote.innerHTML = quotes[random].quote;
+        theWriter.innerHTML = quotes[random].writer;
+    })
+
+</script>
+</html>
